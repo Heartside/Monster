@@ -1,0 +1,20 @@
+# By default, ignore _all_ files, but not directories
+*
+!*/
+
+# Git
+!.gitattributes
+!.gitignore
+
+# Timing and subs
+!*.log
+!*.ass
+
+# Fonts
+!*.ttf
+!*.otf
+!*.ttc
+
+# Scripts
+!scripts/*
+!mux.py

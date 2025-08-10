@@ -1,0 +1,2 @@
+*.ass text filter=ass-clean
+*.ass merge=assdiff3
