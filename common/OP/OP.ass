@@ -4,11 +4,33 @@ ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
 YCbCr Matrix: None
+PlayResX: 1920
+PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000,-1,0,0,0,100,100,0,0,1,3.6,1.5,2,225,225,60,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,This is a random temp file Chika made for formatting purposes. Please ignore it. Thank you :D
+Dialogue: 0,0:01:10.57,0:01:12.91,GJM_Main_1080p,,0,0,0,,♪ Please, let it end... ♪
+Dialogue: 0,0:01:12.91,0:01:14.78,GJM_Main_1080p,,0,0,0,,♪ Take away everything. ♪
+Dialogue: 0,0:01:15.20,0:01:18.95,GJM_Main_1080p,,0,0,0,,♪ Devour the pain\Nand loneliness. ♪
+Dialogue: 0,0:01:30.84,0:01:35.39,GJM_Main_1080p,,0,0,0,,♪ I remained stagnant,\Njust like that day. ♪
+Dialogue: 0,0:01:35.64,0:01:38.22,GJM_Main_1080p,,0,0,0,,♪ A light pierced through ♪
+Dialogue: 0,0:01:38.22,0:01:41.23,GJM_Main_1080p,,0,0,0,,♪ my dark, empty days. ♪
+Dialogue: 0,0:01:41.48,0:01:43.39,GJM_Main_1080p,,0,0,0,,♪ The color of the deep sea, ♪
+Dialogue: 0,0:01:43.40,0:01:46.06,GJM_Main_1080p,,0,0,0,,♪ atop the fleeting bubbles ♪
+Dialogue: 0,0:01:46.61,0:01:48.36,GJM_Main_1080p,,0,0,0,,♪ It still gouges my chest... ♪
+Dialogue: 0,0:01:48.36,0:01:50.23,GJM_Main_1080p,,0,0,0,,♪ Wrapped in the\Nclinging scent of summer. ♪
+Dialogue: 0,0:01:50.24,0:01:52.91,GJM_Main_1080p,,0,0,0,,♪ I don't want to\Nforget — and yet... ♪
+Dialogue: 0,0:01:53.74,0:01:57.83,GJM_Main_1080p,,0,0,0,,♪ Before you arrived...\NI split this fruit. ♪
+Dialogue: 0,0:01:58.04,0:02:00.83,GJM_Main_1080p,,0,0,0,,♪ With those hands,\Nwith that desire. ♪
+Dialogue: 0,0:02:01.25,0:02:05.54,GJM_Main_1080p,,0,0,0,,♪ I want you to guide\Nthese restrained arms. ♪
+Dialogue: 0,0:02:05.92,0:02:08.67,GJM_Main_1080p,,0,0,0,,♪ Devour my flesh, my heart. ♪
+Dialogue: 0,0:02:09.13,0:02:12.26,GJM_Main_1080p,,0,0,0,,♪ Make it come true. ♪
+Dialogue: 0,0:02:13.97,0:02:16.55,GJM_Main_1080p,,0,0,0,,♪ Ah..., ♪
+Dialogue: 0,0:02:16.55,0:02:20.31,GJM_Main_1080p,,0,0,0,,♪ just wait a little longer. ♪
+Dialogue: 0,0:02:21.27,0:02:24.35,GJM_Main_1080p,,0,0,0,,♪ Ah... ♪
+Dialogue: 0,0:02:24.35,0:02:27.98,GJM_Main_1080p,,0,0,0,,♪ who was it that\Naimed for me? ♪
