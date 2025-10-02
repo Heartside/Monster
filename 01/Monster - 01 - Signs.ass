@@ -3,7 +3,7 @@ Title: Default Aegisub file
 ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
-YCbCr Matrix: None
+YCbCr Matrix: TV.709
 PlayResX: 1920
 PlayResY: 1080
 
@@ -14,20 +14,33 @@ Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:01:29.34,0:01:30.84,GJM_Main_1080p,,0,0,0,,[This Monster Wants to Eat Me]
-Dialogue: 0,0:02:44.87,0:02:48.50,GJM_Main_1080p,,0,0,0,,[Episode 1 : "The death-\Nseeking girl awaits the Sea"]
-Dialogue: 0,0:02:49.21,0:02:51.30,GJM_Main_1080p,,0,0,0,,[Snooze - 6:45 Alarm]
-Dialogue: 0,0:03:20.37,0:03:21.95,GJM_Main_1080p,,0,0,0,,[If anything comes up, please contact\Nme again. Sorry. well then, good night.]
-Dialogue: 0,0:03:21.95,0:03:23.04,GJM_Main_1080p,,0,0,0,,[Thank you for worrying\Nabout me. you too, good night.]
-Dialogue: 0,0:03:25.87,0:03:28.83,GJM_Main_1080p,,0,0,0,,[I don't think I'll be able to make it over there\Nfor the anniversary this year... I'm really sorry.]
-Dialogue: 0,0:03:29.00,0:03:33.05,GJM_Main_1080p,,0,0,0,,[I'm sure your Dad and Mom in heaven would be\Nso glad to see Hinako as a high school student.]
-Dialogue: 0,0:03:36.47,0:03:39.55,GJM_Main_1080p,,0,0,0,,[I'm fine over here]
-Dialogue: 0,0:03:39.80,0:03:43.27,GJM_Main_1080p,,0,0,0,,[so do your best at work.]
-Dialogue: 0,0:03:47.81,0:03:50.40,GJM_Main_1080p,,0,0,0,,[Miko: Sorry! I'm gonna be late\Ntoday, so go to school without me!]
-Dialogue: 0,0:03:50.40,0:03:53.32,GJM_Main_1080p,,0,0,0,,[Miko : Be careful!\NSeriously! I'm really sorry!]
-Dialogue: 0,0:11:24.85,0:11:29.65,GJM_Main_1080p,,0,0,0,,[Prof. Takano is scary.]
-Dialogue: 0,0:11:32.90,0:11:41.74,GJM_Main_1080p,,0,0,0,,[Mr. Yamashita, Physical education teacher, Very Scary]
-Dialogue: 0,0:13:12.58,0:13:14.80,GJM_Main_1080p,,0,0,0,,[Shiomi High School]
-Dialogue: 0,0:18:45.00,0:18:50.17,GJM_Main_1080p,,0,0,0,,[Miko:“Turns out I've got a fever.” “Were you\Nokay on your own? Be careful heading home.” ]
-Dialogue: 0,0:19:09.40,0:19:10.36,GJM_Main_1080p,,0,0,0,,[Isn't that rude!?] {Says the same thing as in the dialogue here}
-Dialogue: 0,0:23:30.08,0:23:34.58,GJM_Main_1080p,,0,0,0,,[Episode 2 : The Unknown\NBeneath the Dappled Light]
+Dialogue: 0,0:01:29.34,0:01:30.84,GJM_Main_1080p,,0,0,0,,This Monster Wants to Eat Me
+Dialogue: 0,0:02:44.87,0:02:48.50,GJM_Main_1080p,,0,0,0,,{\pos(1656,676)}Episode 1
+Dialogue: 0,0:02:44.87,0:02:48.50,GJM_Main_1080p,,0,0,0,,A Girl Who Seeks Death Waits for the Sea
+Dialogue: 0,0:02:49.21,0:02:51.30,GJM_Main_1080p,,0,0,0,,Snooze{orange}\NAlarm{white}\NStop{pressed by finger}
+Dialogue: 0,0:03:20.37,0:03:23.04,GJM_Main_1080p,,0,0,0,,{\pos(1104,368)}Call me if you need anything, dear.\NGood night, take care.
+Dialogue: 0,0:03:20.37,0:03:23.04,GJM_Main_1080p,,0,0,0,,{\pos(1636,776)}Thanks for worrying about me.\NGood night, Auntie.
+Dialogue: 0,0:03:20.37,0:03:23.04,GJM_Main_1080p,,0,0,0,,{\pos(1108,820)}Read{alt: Seen}
+Dialogue: 0,0:03:25.87,0:03:28.83,GJM_Main_1080p,,0,0,0,,{\pos(760,260)}I don't think I'll make it back for the anniversary this year. I'm really sorry.
+Dialogue: 0,0:03:29.00,0:03:33.05,GJM_Main_1080p,,0,0,0,,Seeing you in high school now would make your parents up in heaven so proud.
+Dialogue: 0,0:03:36.47,0:03:39.55,GJM_Main_1080p,,0,0,0,,I'll be fine.
+Dialogue: 0,0:03:39.80,0:03:43.27,GJM_Main_1080p,,0,0,0,,Good luck at work.
+Dialogue: 0,0:03:47.81,0:03:50.40,GJM_Main_1080p,,0,0,0,,{\pos(780,468)}Miko\Nsorry! running late today\Nso head to school w/o me
+Dialogue: 0,0:03:50.40,0:03:53.32,GJM_Main_1080p,,0,0,0,,Miko\Nstay safe!\NI mean it! and sorry again
+Dialogue: 0,0:11:24.85,0:11:29.65,GJM_Main_1080p,,0,0,0,,{\pos(1644,296)}Ms. Takano is super scary{or Mrs.}
+Dialogue: 0,0:11:32.90,0:11:41.74,GJM_Main_1080p,,0,0,0,,{\pos(1164,412)}Mr. Yamashita (gym teacher)
+Dialogue: 0,0:11:32.90,0:11:41.74,GJM_Main_1080p,,0,0,0,,{\pos(332,708)}is also hella scary
+Dialogue: 0,0:13:12.58,0:13:14.80,GJM_Main_1080p,,0,0,0,,Shiomi High School
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(564,104)}Miko
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(668,232)}shoot! I think I got a fever\Nsorry if I'm not there tomorrow
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(720,432)}I'll text you tomorrow morning\Nreally sorry
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(1320,436)}Take care
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(1044,456)}Read
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(932,660)}Today
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,{\pos(800,832)}yep, stuck at home\Ngo ahead w/o me
+Dialogue: 0,0:18:45.00,0:18:48.65,GJM_Main_1080p,,0,0,0,,were you okay by yourself?\Nbe careful on the way home
+Dialogue: 0,0:18:48.65,0:18:50.65,GJM_Main_1080p,,0,0,0,,{\pos(948,868)}Sowwy
+Dialogue: 0,0:18:54.91,0:18:56.91,GJM_Main_1080p,,0,0,0,,Squelch...
+Dialogue: 0,0:19:09.40,0:19:10.36,GJM_Main_1080p,,0,0,0,,The heck is that supposed to mean?!{Says the same thing as in the dialogue here}{TLC: ああ見えてって isn't included in the dialogue (but can be ignored)}
+Dialogue: 0,0:23:30.08,0:23:34.58,GJM_Main_1080p,,0,0,0,,{\pos(532,284)}Episode 2
+Dialogue: 0,0:23:30.08,0:23:34.58,GJM_Main_1080p,,0,0,0,,The Sunlit Beast and the Festival Song
