@@ -4,11 +4,30 @@ ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
 YCbCr Matrix: None
+PlayResX: 1920
+PlayResY: 1080
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000,-1,0,0,0,100,100,0,0,1,3.6,1.5,2,225,225,60,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,This is a random temp file Chika made for formatting purposes. Please ignore it. Thank you :D
+Dialogue: 0,0:01:29.34,0:01:30.84,GJM_Main_1080p,,0,0,0,,[This Monster Wants to Eat Me]
+Dialogue: 0,0:02:37.53,0:02:39.99,GJM_Main_1080p,,0,0,0,,[Produced by: Watatabe\NProduction Committee]
+Dialogue: 0,0:02:44.87,0:02:48.50,GJM_Main_1080p,,0,0,0,,[Episode 1 : "The death-\Nseeking girl awaits the Sea"]
+Dialogue: 0,0:02:49.21,0:02:51.30,GJM_Main_1080p,,0,0,0,,[Snooze - 6:45 Alarm]
+Dialogue: 0,0:03:20.37,0:03:21.95,GJM_Main_1080p,,0,0,0,,[If anything comes up, please contact\Nme again. Sorry. well then, good night.]
+Dialogue: 0,0:03:21.95,0:03:23.04,GJM_Main_1080p,,0,0,0,,[Thank you for worrying\Nabout me. you too, good night.]
+Dialogue: 0,0:03:25.87,0:03:28.83,GJM_Main_1080p,,0,0,0,,[I don't think I'll be able to make it over there\Nfor the anniversary this year... I'm really sorry.]
+Dialogue: 0,0:03:29.00,0:03:33.05,GJM_Main_1080p,,0,0,0,,[I'm sure your Dad and Mom in heaven would be\Nso glad to see Hinako as a high school student.]
+Dialogue: 0,0:03:36.47,0:03:39.55,GJM_Main_1080p,,0,0,0,,[I'm fine over here]
+Dialogue: 0,0:03:39.80,0:03:43.27,GJM_Main_1080p,,0,0,0,,[so do your best at work.]
+Dialogue: 0,0:03:47.81,0:03:50.40,GJM_Main_1080p,,0,0,0,,[Miko: Sorry! I'm gonna be late\Ntoday, so go to school without me!]
+Dialogue: 0,0:03:50.40,0:03:53.32,GJM_Main_1080p,,0,0,0,,[Miko : Be careful!\NSeriously! I'm really sorry!]
+Dialogue: 0,0:11:32.90,0:11:41.74,GJM_Main_1080p,,0,0,0,,[Mr. Yamashita, Physical education teacher, Very Scary]
+Dialogue: 0,0:13:12.58,0:13:14.80,GJM_Main_1080p,,0,0,0,,[Shiomi High School]
+Dialogue: 0,0:18:45.00,0:18:50.17,GJM_Main_1080p,,0,0,0,,[Miko:“Turns out I've got a fever.” “Were you\Nokay on your own? Be careful heading home.” ]
+Dialogue: 0,0:19:09.40,0:19:10.36,GJM_Main_1080p,,0,0,0,,[Isn't that rude!?] {Says the same thing as in the dialogue here}
+Dialogue: 0,0:23:30.08,0:23:34.58,GJM_Main_1080p,,0,0,0,,[Episode 2 : The Unknown\NBeneath the Dappled Light]
