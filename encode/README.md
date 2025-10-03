@@ -5,9 +5,9 @@
 
 ## Sources
 
-CR WEB-DL should be renamed to `01 (CR).mkv`. AMZN WEB-DL should be renamed to
-`01 (AMZN).mkv`. (Replace `01` with the respective episode number.) These should
-all exist within the same folder somewhere.
+CR WEB-DL should be renamed to `01 (CR).mkv`. AMZN WEB-DL (via ToonsHub, not VARYG)
+should be renamed to `01 (AMZN).mkv`. (Replace `01` with the respective episode
+number.) These should all exist within the same folder somewhere.
 
 Create a `.env` file within this `encode` directory with the following
 content:
