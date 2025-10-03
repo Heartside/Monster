@@ -24,6 +24,7 @@ from vspreview import is_preview
 from vsrgtools import bilateral
 from vstools import (
     ChromaLocation,
+    DitherType,
     FrameRangeN,
     FrameRangesN,
     Keyframes,
@@ -91,6 +92,8 @@ def filterchain(
     episode: str,
     source: Source,
     no_dehalo: FrameRangeN | FrameRangesN | None = None,
+    mini: bool = False,
+    flashback_scenes: FrameRangeN | FrameRangesN | None = None
 ) -> FilterchainResults:
     cr_file = src_file(
         str(source.cr_path),
@@ -110,7 +113,10 @@ def filterchain(
     src = keyframes.to_clip(cr, scene_idx_prop=True)
 
     # Denoise
-    denoised = denoise(src, sigma=0.72, strength=0.27, thSAD=117, tr=3)
+    if not mini:
+        denoised = denoise(src, sigma=0.72, strength=0.27, thSAD=117, tr=3)
+    else:
+        denoised = denoise(src, sigma=0.72, strength=0.27, thSAD=117, tr=3)
 
     # Dehalo
     dehaloed = fine_dehalo(denoised, blur=1.7, thmi=50, pre_ss=2)
@@ -126,16 +132,19 @@ def filterchain(
     debanded = pfdeband(dehaloed, thr=1.3, debander=placebo_deband)
 
     # Regrain
-    grained = adaptive_grain(
-        debanded,
-        strength=[1.92, 0.4],
-        size=3.16,
-        temporal_average=50,
-        seed=274810,
-        **ntype4,
-    )
+    if not mini:
+        grained = adaptive_grain(
+            debanded,
+            strength=[1.92, 0.4],
+            size=3.16,
+            temporal_average=50,
+            seed=274810,
+            **ntype4,
+        )
 
-    final = finalize_clip(grained)
+        final = finalize_clip(grained)
+    else:
+        final = finalize_clip(debanded, dither_type=DitherType.NONE)
 
     if is_preview():
         set_output(src, "src")
@@ -196,3 +205,6 @@ def mux(
             "E-AC-3 2.0", "jpn", default=True, forced=False
         ),
     )
+
+def mux_mini():
+    pass
