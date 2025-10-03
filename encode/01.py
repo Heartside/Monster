@@ -37,7 +37,7 @@ if args.mini:
     scene_detection(scene_detection_temp_dir, source.cr_path, flashback_scenes_json, flashback_scenes_zones)
     flashback_scenes = get_flashback_scenes(flashback_scenes_json)
 
-    filterchain_results = filterchain(episode=EPISODE, source=source, no_dehalo=NO_DEHALO, mini=mini, flashback_scenes=flashback_scenes)
+    filterchain_results = filterchain(episode=EPISODE, source=source, no_dehalo=NO_DEHALO, mini=args.mini, flashback_scenes=flashback_scenes)
 
     if not is_preview():
         mux_mini(episode=EPISODE, filterchain_results=filterchain_results, target=intermediate)

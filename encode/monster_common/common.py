@@ -31,6 +31,7 @@ from vstools import (
     finalize_clip,
     replace_ranges,
     set_output,
+    SPath,
     vs,
 )
 
@@ -206,5 +207,9 @@ def mux(
         ),
     )
 
-def mux_mini():
+def mux_mini(
+    episode: str,
+    filterchain_results: FilterchainResults,
+    target: SPath
+):
     pass
