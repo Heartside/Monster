@@ -120,7 +120,7 @@ def filterchain(
         heavy_denoised = denoise(src, sigma=1.07, strength=0.27, thSAD=257, tr=3)
         weak_denoised = denoise(src, sigma=0.57, strength=0.17, thSAD=87, tr=2)
         weak_denoised = core.vszip.LimitFilter(weak_denoised, src, dark_thr=0.25, bright_thr=1.5, elast=3.5)
-        
+
         assert flashback_scenes is not None
         denoised = replace_ranges(heavy_denoised, weak_denoised, flashback_scenes)
 
@@ -135,7 +135,8 @@ def filterchain(
         dehaloed = replace_ranges(dehaloed, denoised, no_dehalo)
 
     # Deband
-    debanded = pfdeband(dehaloed, thr=1.3, debander=placebo_deband)
+    if not mini:
+        debanded = pfdeband(dehaloed, thr=1.3, debander=placebo_deband)
 
     # Regrain
     if not mini:
