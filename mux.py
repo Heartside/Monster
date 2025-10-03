@@ -1,9 +1,9 @@
 from muxtools import GlobSearch, Premux, Setup, SubFile, TmdbConfig, mux
 
-ep = int(input("Enter episode number: "))
+epi = int(input("Enter episode number: "))
 
 setup = Setup(
-    f"{ep:02d}",
+    f"{epi:02d}",
     None,
     out_dir=R"This Monster Wants to Eat Me (2025) - S01 (WEBRip 1080p HEVC EAC3) [Dual Audio] [Heartside]",
     mkv_title_naming="",
@@ -12,7 +12,7 @@ setup = Setup(
     error_on_danger=True,
 )
 
-premux = GlobSearch(f"./{setup.episode}/This Monster Wants to Eat Me - {setup.episode}*premux*.mkv")
+premux = GlobSearch(f"./{setup.episode}/*Monster* - {setup.episode}*premux*.mkv")
 
 dialogue = (
     SubFile(f"./{setup.episode}/Monster - {setup.episode} - Dialogue.ass")
