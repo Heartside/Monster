@@ -1,0 +1,23 @@
+[project]
+name = "monster-encode"
+version = "0.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "muxtools==0.4.0",
+    "pydantic==2.11.9",
+    "vodesfunc==1.10.0",
+    "vsjetpack==0.7.2",
+    "vsmuxtools==0.4.0",
+    "vspreview==0.16.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy==1.18.2",
+    "ruff==0.13.2",
+]
+
+[tool.ruff.format]
+line-ending = "lf"

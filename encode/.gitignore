@@ -1,0 +1,7 @@
+!.python-version
+!config.ini
+!pyproject.toml
+!README.md
+!uv.lock
+
+!*.py
