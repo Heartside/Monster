@@ -71,9 +71,9 @@ def denoise(
     return nl_means(
         denoised_luma,
         ref=ref,
-        strength=strength,
+        h=strength,
         tr=tr,
-        sr=sr,
+        a=sr,
         wmode=NLMeans.WeightMode.BISQUARE_HR,  # wmode=3
         planes=[1, 2],
     )
