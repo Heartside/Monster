@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path, PurePath
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -17,6 +18,8 @@ class Source(BaseModel):
     amzn_path: PurePath | str
     op: tuple[int, int] | None = None
     ed: tuple[int, int] | None = None
+    op_type: Literal[1] | None = None
+    ed_type: Literal[1] | None = None
 
 
 sources = {
@@ -25,5 +28,7 @@ sources = {
         amzn_path=raws_directory / "01 (AMZN).mkv",
         op=(1678, 1678 + 2156 + 2),
         ed=(31649, 31649 + 2156 + 1),
+        op_type=1,
+        ed_type=1
     )
 }

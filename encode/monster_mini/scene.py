@@ -23,20 +23,19 @@ def get_paths(episode):
     return scene_detection_temp_dir, flashback_scenes_json, flashback_scenes_zones, intermediate
 
 
-def scene_detection(temp_dir, source, output_json, output_zones):
-    if not output_json.exists() or not output_zones.exists():
-        env = dict(os.environ)
-        env["SOURCE_FILE_CR"] = str(source)
-        command = [
-            sys.executable, SPath(__file__).parent / "scripts" / "scene-detection.py",
-            "--temp", temp_dir,
-            "--input", source,
-            "--scene-detection-input", SPath(__file__).parent / "scripts" / "scene-detection-source.py",
-            "--output-scenes", output_json.parent / "THIS_FILE_SHOULD_NOT_BE_GENERATED_KDLUIGSJ",
-            "--output-json", output_json,
-            "--output-zones", output_zones
-        ]
-        subprocess.run(command, env=env, check=True)
+def scene_detection(temp_dir, source, output_json):
+    env = dict(os.environ)
+    env["SOURCE_FILE_CR"] = str(source)
+    command = [
+        sys.executable, SPath(__file__).parent / "scripts" / "scene-detection.py",
+        "--temp", temp_dir,
+        "--resume",
+        "--input", source,
+        "--scene-detection-input", SPath(__file__).parent / "scripts" / "scene-detection-source.py",
+        "--output-scenes", output_json.parent / "THIS_FILE_SHOULD_NOT_BE_GENERATED_KDLUIGSJ",
+        "--output-json", output_json,
+    ]
+    subprocess.run(command, env=env, check=True)
 
 def get_flashback_scenes(output_json):
     with output_json.open("r") as output_json_f:

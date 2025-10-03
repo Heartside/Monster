@@ -69,7 +69,6 @@ parser.add_argument("--input-scenes", type=Path, help="Perform your own scene de
 parser.add_argument("-o", "--output-scenes", type=Path, required=True, help="Output scenes file for encoding")
 parser.add_argument("-m", "--output-roi-maps", type=Path, help="Directory for output ROI maps, relative or absolute. The paths to ROI maps are written into output scenes")
 parser.add_argument("--output-json", type=Path, required=True)
-parser.add_argument("--output-zones", type=Path, required=True)
 group = parser.add_mutually_exclusive_group()
 group.add_argument("--zones", type=Path, help="Zones file for Progression Boost. Check the guide inside `Progression-Boost.py` for more information")
 group.add_argument("--zones-string", help="Zones string for Progression Boost. Same as `--zones` but fed from commandline")
@@ -90,7 +89,6 @@ input_scenes_file = args.input_scenes
 scenes_file = args.output_scenes
 roi_maps_dir = args.output_roi_maps
 new_json_file = args.output_json
-new_zones_file = args.output_zones
 zones_file = args.zones
 zones_string = args.zones_string
 assert zones_file is None
@@ -2051,32 +2049,28 @@ for zone_scene in zone_scenes["scenes"]:
 
 new_json = []
 for scene_n, zone_scene in enumerate(zone_scenes["scenes"]):
+    def add_to_list():
+        if len(new_json) > 0 and new_json[-1][1] == zone_scene["start_frame"]:
+            new_json[-1][1] = zone_scene["end_frame"]
+        else:
+            new_json.append([zone_scene["start_frame"], zone_scene["end_frame"]])
+
     white_or_black = np.logical_or(scene_detection_min[zone_scene["start_frame"] + 1:zone_scene["end_frame"]] > 208.000,
                                    scene_detection_max[zone_scene["start_frame"] + 1:zone_scene["end_frame"]] < 43.000)
     if not np.all(white_or_black):
         noise_diff = scene_detection_noise_diffs[zone_scene["start_frame"] + 1:zone_scene["end_frame"]]
-        noise_diff = np.percentile(noise_diff[~white_or_black], 40)
         luma_diff = scene_detection_diffs[zone_scene["start_frame"] + 1:zone_scene["end_frame"]]
-        luma_diff = np.percentile(luma_diff[~white_or_black], 40)
-        if noise_diff > 0.0011 and luma_diff < noise_diff * 7.4:
-            if len(new_json) > 0 and new_json[-1][1] == zone_scene["start_frame"]:
-                new_json[-1][1] = zone_scene["end_frame"]
-            else:
-                new_json.append([zone_scene["start_frame"], zone_scene["end_frame"]])
+
+        if np.mean((noise_diff > 0.0011) & (luma_diff < noise_diff * 7.7)) > 0.40:
+            add_to_list()
     else:
         noise_diff = scene_detection_noise_diffs[zone_scene["start_frame"] + 1:zone_scene["end_frame"]]
-        noise_diff = np.percentile(noise_diff, 40)
-        if noise_diff > 0.0010:
-            if len(new_json) > 0 and new_json[-1][1] == zone_scene["start_frame"]:
-                new_json[-1][1] = zone_scene["end_frame"]
-            else:
-                new_json.append([zone_scene["start_frame"], zone_scene["end_frame"]])
+        noise_diff_percentile = np.percentile(noise_diff, 40)
+        if noise_diff_percentile > 0.0009:
+            add_to_list()
     
 with new_json_file.open("w") as new_json_f:
     json.dump(new_json, new_json_f, cls=NumpyEncoder)
-with new_zones_file.open("w") as new_zones_f:
-    for line in new_json:
-        new_zones_f.write(f"{line[0]} {line[1]} grain\n")
 
 
 raise SystemExit(0)
