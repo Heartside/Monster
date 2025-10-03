@@ -117,7 +117,12 @@ def filterchain(
     if not mini:
         denoised = denoise(src, sigma=0.72, strength=0.27, thSAD=117, tr=3)
     else:
-        denoised = denoise(src, sigma=0.72, strength=0.27, thSAD=117, tr=3)
+        heavy_denoised = denoise(src, sigma=1.07, strength=0.27, thSAD=257, tr=3)
+        weak_denoised = denoise(src, sigma=0.57, strength=0.17, thSAD=87, tr=2)
+        weak_denoised = core.vszip.LimitFilter(weak_denoised, src, dark_thr=0.25, bright_thr=1.5, elast=3.5)
+        
+        assert flashback_scenes is not None
+        denoised = replace_ranges(heavy_denoised, weak_denoised, flashback_scenes)
 
     # Dehalo
     dehaloed = fine_dehalo(denoised, blur=1.7, thmi=50, pre_ss=2)
