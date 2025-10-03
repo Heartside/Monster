@@ -24,6 +24,7 @@ from vspreview import is_preview
 from vsrgtools import bilateral
 from vstools import (
     ChromaLocation,
+    core,
     DitherType,
     FrameRangeN,
     FrameRangesN,
@@ -94,7 +95,7 @@ def filterchain(
     source: Source,
     no_dehalo: FrameRangeN | FrameRangesN | None = None,
     mini: bool = False,
-    flashback_scenes: FrameRangeN | FrameRangesN | None = None
+    dynamic_detail_scenes: FrameRangeN | FrameRangesN | None = None
 ) -> FilterchainResults:
     cr_file = src_file(
         str(source.cr_path),
@@ -121,8 +122,8 @@ def filterchain(
         weak_denoised = denoise(src, sigma=0.57, strength=0.17, thSAD=87, tr=2)
         weak_denoised = core.vszip.LimitFilter(weak_denoised, src, dark_thr=0.25, bright_thr=1.5, elast=3.5)
 
-        assert flashback_scenes is not None
-        denoised = replace_ranges(heavy_denoised, weak_denoised, flashback_scenes)
+        assert dynamic_detail_scenes is not None
+        denoised = replace_ranges(heavy_denoised, weak_denoised, dynamic_detail_scenes)
 
     # Dehalo
     dehaloed = fine_dehalo(denoised, blur=1.7, thmi=50, pre_ss=2)
@@ -150,8 +151,9 @@ def filterchain(
         )
 
         final = finalize_clip(grained)
-    else:
-        final = finalize_clip(debanded, dither_type=DitherType.NONE)
+
+    if mini:
+        final = finalize_clip(dehaloed, dither_type=DitherType.NONE)
 
     if is_preview():
         set_output(src, "src")

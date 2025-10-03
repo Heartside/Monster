@@ -1,7 +1,7 @@
 from copy import deepcopy
 import json
 
-def finalise_flashback_scenes(json_file, zones_file, source):
+def finalise_dynamic_detail_scenes(json_file, zones_file, source):
     with json_file.open("r") as json_f:
         scenes = json.load(json_f)
 

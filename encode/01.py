@@ -30,15 +30,15 @@ if args.main:
 
 if args.mini:
     from monster_common import mux_mini
-    from monster_mini import finalise_flashback_scenes, get_flashback_scenes, get_paths, scene_detection
+    from monster_mini import finalise_dynamic_detail_scenes, get_dynamic_detail_scenes, get_paths, scene_detection
 
-    scene_detection_temp_dir, flashback_scenes_json, flashback_scenes_zones, intermediate = get_paths(EPISODE)
+    scene_detection_temp_dir, dynamic_detail_scenes_json, dynamic_detail_scenes_zones, intermediate = get_paths(EPISODE)
 
-    scene_detection(scene_detection_temp_dir, source.cr_path, flashback_scenes_json)
-    finalise_flashback_scenes(flashback_scenes_json, flashback_scenes_zones, source)
-    flashback_scenes = get_flashback_scenes(flashback_scenes_json)
+    scene_detection(scene_detection_temp_dir, source.cr_path, dynamic_detail_scenes_json)
+    finalise_dynamic_detail_scenes(dynamic_detail_scenes_json, dynamic_detail_scenes_zones, source)
+    dynamic_detail_scenes = get_dynamic_detail_scenes(dynamic_detail_scenes_json)
 
-    filterchain_results = filterchain(episode=EPISODE, source=source, no_dehalo=NO_DEHALO, mini=args.mini, flashback_scenes=flashback_scenes)
+    filterchain_results = filterchain(episode=EPISODE, source=source, no_dehalo=NO_DEHALO, mini=args.mini, dynamic_detail_scenes=dynamic_detail_scenes)
 
     if not is_preview():
         mux_mini(episode=EPISODE, filterchain_results=filterchain_results, target=intermediate)
