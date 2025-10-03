@@ -19,7 +19,7 @@ from vsdenoise import (
 from vsdenoise.blockmatch import BM3D
 from vsdenoise.nlm import NLMeans
 from vsexprtools import norm_expr
-from vsmuxtools import SourceFilter, do_audio, settings_builder_x265, src_file, x265
+from vsmuxtools import do_audio, LosslessX264, LosslessPreset, settings_builder_x265, SourceFilter, src_file, x265
 from vspreview import is_preview
 from vsrgtools import bilateral
 from vstools import (
@@ -220,4 +220,4 @@ def mux_mini(
     filterchain_results: FilterchainResults,
     target: SPath
 ):
-    pass
+    LosslessX264(LosslessPreset.MIDDLEGROUND).encode(filterchain_results.final, outfile=target)
