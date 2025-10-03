@@ -18,7 +18,7 @@ RAWS_DIRECTORY="/path/to/raws"
 
 Replace `/path/to/raws` with the path to the folder containing the video/audio
 sources. Note that on Windows, any backslashes must be escaped
-(so, `C:\path\to\raws` becomes `"C:\\path\\to\\raws"`).
+(so, `C:\path\to\raws` becomes `C:\\path\\to\\raws`).
 
 ## Usage
 
