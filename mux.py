@@ -1,4 +1,4 @@
-from muxtools import GlobSearch, Premux, Setup, SubFile, TmdbConfig, mux
+from muxtools import Chapters, GlobSearch, Premux, Setup, SubFile, TmdbConfig, mux
 
 epi = int(input("Enter episode number: "))
 
@@ -54,11 +54,14 @@ opfonts = op.collect_fonts(use_system_fonts=False)
 
 premux = Premux(premux, subtitles=None, keep_attachments=False)
 
+chapters = Chapters.from_sub(dialogue, timesource=premux.file)
+
 mux(
     premux,
     dialogue.to_track("Full Subtitles [Heartside]", "eng", default=True, forced=False),
     signs.to_track("Signs/Songs [Heartside]", "eng", default=False, forced=True),
     # dubtitles.to_track("Dubtitles (SDH) [Heartside]", "eng", default=False, forced=False),
     *fonts,
+    chapters,
     tmdb=TmdbConfig(274810, season=1),
 )
