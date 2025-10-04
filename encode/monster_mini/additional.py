@@ -25,7 +25,7 @@ def finalise_dynamic_detail_scenes(json_file, zones_file, source):
         add_to_scenes(json_scenes, source.op[0] + 1912, source.op[0] + 2042) # 3590, 3720
         add_to_scenes(json_scenes, source.op[0] + 2056, source.op[0] + 2085) # 3734, 3763
 
-        add_to_scenes(zones_scenes, source.op[0] + 1288, source.op[0] + 1371) # 2966, 3049
+        add_to_scenes(zones_scenes, source.op[0] + 1288, source.op[0] + 1373) # 2966, 3051
 
     if source.ed_type == 1:
         add_to_scenes(json_scenes, source.ed[0], source.ed[1])

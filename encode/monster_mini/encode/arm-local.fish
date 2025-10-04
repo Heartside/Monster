@@ -37,7 +37,8 @@ function encode
     if test -e $temp_dir
         set_color -o yellow ; echo "[encode] Temp dir already exists. Continuing..." ; set_color normal
     end
-    SOURCE_FILE=$source_file SOURCE_FFINDEX_FILE=$source_ffindex_file av1an -y --max-tries 5 --temp $temp_dir --resume --keep --verbose --log-level debug -i arm-local-source.py -o $video_file --scenes $scenes_file --chunk-order random --chunk-method ffms2 --workers $workers --encoder svt-av1 --no-defaults --video-params "[1;5m:Hanabana:[0m" --pix-format yuv420p10le --concat mkvmerge
+    set log_file "$temp_dir/log.log"
+    SOURCE_FILE=$source_file SOURCE_FFINDEX_FILE=$source_ffindex_file av1an -y --max-tries 5 --temp $temp_dir --resume --keep --verbose --log-file $log_file --log-level debug -i arm-local-source.py -o $video_file --scenes $scenes_file --chunk-order random --chunk-method ffms2 --workers $workers --encoder svt-av1 --no-defaults --video-params "[1;5m:Hanabana:[0m" --pix-format yuv420p10le --concat mkvmerge
     or return $status
 
     if not test -e $video_file

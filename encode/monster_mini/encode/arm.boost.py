@@ -5,23 +5,23 @@ class QueueService(Service):
     current_encode = None
 
     def exposed_run(self, command):
-        if current_encode is not None:
-            assert current_encode.poll() is not None
+        if self.current_encode is not None:
+            assert self.current_encode.poll() is not None
 
-        current_encode = subprocess.Popen(command, text=True)
+        self.current_encode = subprocess.Popen(command, text=True)
 
-    def exposed_poll2():
-        assert current_encode is not None
+    def exposed_poll2(self):
+        assert self.current_encode is not None
 
-        if current_encode.poll() is not None:
+        if self.current_encode.poll() is not None:
             return True
         else:
             return None
 
-    def exposed_wait():
-        assert current_encode is not None
+    def exposed_wait(self):
+        assert self.current_encode is not None
 
-        current_encode.wait()
+        self.current_encode.wait()
 
     def exposed_shutdown(self):
         server.close()

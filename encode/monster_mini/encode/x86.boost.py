@@ -1308,7 +1308,16 @@ zones_spec["builtin_example"] = BuiltinExampleZone()
 
 # Now you can implement your own zone below:
 
+class GrainZone(DefaultZone):
+    metric_target = 0.950
 
+    def final_dynamic_photon_noise(self, start_frame: int, end_frame: int,
+                                         luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> Optional[int]:
+        return None
+    final_photon_noise_height = None
+    final_photon_noise_width = None
+
+zones_spec["grain"] = GrainZone()
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
