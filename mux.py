@@ -46,8 +46,6 @@ ed = (
     .clean_extradata()
 )
 
-# dubtitles= SubFile(f"./{setup.episode}/This Monster Wants to Eat Me - {setup.episode} - Dubtitles.ass").clean_styles().clean_garbage().clean_comments()
-
 fonts = dialogue.collect_fonts(use_system_fonts=False)
 signsfonts = signs.collect_fonts(use_system_fonts=False)
 opfonts = op.collect_fonts(use_system_fonts=False)
@@ -60,7 +58,6 @@ mux(
     premux,
     dialogue.to_track("Full Subtitles [Heartside]", "eng", default=True, forced=False),
     signs.to_track("Signs/Songs [Heartside]", "eng", default=False, forced=True),
-    # dubtitles.to_track("Dubtitles (SDH) [Heartside]", "eng", default=False, forced=False),
     *fonts,
     chapters,
     tmdb=TmdbConfig(274810, season=1),
