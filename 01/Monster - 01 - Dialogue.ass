@@ -3,7 +3,7 @@ Title: Default Aegisub file
 ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
-YCbCr Matrix: TV.709
+YCbCr Matrix: None
 PlayResX: 1920
 PlayResY: 1080
 
@@ -14,12 +14,12 @@ Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Comment: 10,0:00:00.00,0:00:00.06,Default,,0,0,0,chapter,{Prologue}
-Comment: 10,0:01:09.97,0:01:10.03,Default,,0,0,0,chapter,{Opening}
-Comment: 10,0:02:40.01,0:02:40.07,Default,,0,0,0,chapter,{Part A}
-Comment: 10,0:14:20.38,0:14:20.44,Default,,0,0,0,chapter,{Part B}
-Comment: 10,0:22:00.01,0:22:00.07,Default,,0,0,0,chapter,{Ending}
-Comment: 10,0:23:30.01,0:23:30.07,Default,,0,0,0,chapter,{Preview}
+Comment: 10,0:00:00.00,0:00:00.06,Default,,0,0,0,chapter,Prologue
+Comment: 10,0:01:09.97,0:01:10.03,Default,,0,0,0,chapter,Opening
+Comment: 10,0:02:40.01,0:02:40.07,Default,,0,0,0,chapter,Part A
+Comment: 10,0:14:20.38,0:14:20.44,Default,,0,0,0,chapter,Part B
+Comment: 10,0:22:00.01,0:22:00.07,Default,,0,0,0,chapter,Ending
+Comment: 10,0:23:30.01,0:23:30.07,Default,,0,0,0,chapter,Preview
 Dialogue: 0,0:00:26.66,0:00:28.07,GJM_Main_1080p,,0,0,0,,{\i1}When I close my eyes,
 Dialogue: 0,0:00:28.81,0:00:30.03,GJM_Main_1080p,,0,0,0,,{\i1}I hear the sound of the waves...
 Dialogue: 0,0:00:30.89,0:00:32.76,GJM_Main_1080p,,0,0,0,,{\i1}See the deep blue of the sea...
