@@ -3,9 +3,11 @@ from __future__ import annotations
 from pathlib import Path
 
 from jetpytools import SingleOrArr
-from muxtools import Setup, VideoFile
+from muxtools import make_output, Setup, VideoFile
 from muxtools import mux as vsmux
+from muxtools.utils.dataclass import dataclass, allow_extra
 from pydantic import BaseModel, ConfigDict
+import shlex
 from vodesfunc import adaptive_grain, ntype4
 from vsdeband import pfdeband, placebo_deband
 from vsdehalo import fine_dehalo
@@ -19,7 +21,7 @@ from vsdenoise import (
 from vsdenoise.blockmatch import BM3D
 from vsdenoise.nlm import NLMeans
 from vsexprtools import norm_expr
-from vsmuxtools import do_audio, LosslessX264, LosslessPreset, settings_builder_x265, SourceFilter, src_file, x265
+from vsmuxtools import do_audio, settings_builder_x265, SourceFilter, src_file, VideoEncoder, x264, x265
 from vspreview import is_preview
 from vsrgtools import bilateral
 from vstools import (
@@ -215,9 +217,25 @@ def mux(
         ),
     )
 
+
+@dataclass(config=allow_extra)
+class LosslessX264Mod(VideoEncoder):
+    add_props: bool = True
+
+    def encode(self, clip: vs.VideoNode, outfile: PathLike | None = None) -> VideoFile:
+        out = make_output("lossless", "mp4", user_passed=outfile)
+        settings = ["--preset", "slow", "--qp", "0"] + self.get_custom_args() + ["--colorprim", "bt709", "--transfer", "bt709", "--colormatrix", "bt709"]
+
+        assert clip.format.bits_per_sample <= 10
+
+        avc = x264(shlex.join(settings), add_props=self.add_props, resumable=False)
+        avc._update_settings(clip, False)
+        avc._encode_clip(clip, out, None, 0)
+        return VideoFile(out)
+
 def mux_mini(
     episode: str,
     filterchain_results: FilterchainResults,
     target: SPath
-):
-    LosslessX264(LosslessPreset.MIDDLEGROUND).encode(filterchain_results.final, outfile=target)
+) -> Path | str:
+    return LosslessX264Mod().encode(filterchain_results.final, outfile=target)

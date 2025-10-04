@@ -18,7 +18,7 @@ def get_paths(episode):
     intermediate_dir = SPath(intermediate_dir_raw)
 
     dynamic_detail_scenes_zones = intermediate_dir / f"{episode}.zones.txt"
-    intermediate = intermediate_dir / f"{episode}.264"
+    intermediate = intermediate_dir / f"{episode}.mp4"
 
     return scene_detection_temp_dir, dynamic_detail_scenes_json, dynamic_detail_scenes_zones, intermediate
 
