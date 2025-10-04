@@ -2,6 +2,10 @@
 *
 !*/
 
+.ruff_cache/
+_binaries/
+_workdir/
+
 # Git
 !.gitattributes
 !.gitignore
