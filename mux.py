@@ -53,10 +53,11 @@ ed = (
 
 premux = Premux(premux, subtitles=None, keep_attachments=False)
 
+# TODO: FIX THIS
 chapters = Chapters.from_sub(subs, timesource=premux.file)
 
-full = subs.merge("./common/OP/OP.ass", sync="Opening", timesource=premux.file) # TODO: FIX THIS
-full = full.merge("./common/ED/ED.ass", sync="Ending", timesource=premux.file)
+# TODO: FIX THIS
+full = subs.merge("./common/OP/OP.ass", timesource=premux.file).merge("./common/ED/ED.ass", timesource=premux.file)
 
 full = full.set_headers(
     (ASSHeader.PlayResX, 1920),
