@@ -14,23 +14,21 @@ Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:01:10.57,0:01:12.91,GJM_Main_1080p,,0,0,0,,♪ Please, let it end... ♪
-Dialogue: 0,0:01:12.91,0:01:14.78,GJM_Main_1080p,,0,0,0,,♪ Take away everything. ♪
-Dialogue: 0,0:01:15.20,0:01:18.95,GJM_Main_1080p,,0,0,0,,♪ Devour the pain\Nand loneliness. ♪
-Dialogue: 0,0:01:30.84,0:01:35.39,GJM_Main_1080p,,0,0,0,,♪ I remained stagnant,\Njust like that day. ♪
-Dialogue: 0,0:01:35.64,0:01:38.22,GJM_Main_1080p,,0,0,0,,♪ A light pierced through ♪
-Dialogue: 0,0:01:38.22,0:01:41.23,GJM_Main_1080p,,0,0,0,,♪ my dark, empty days. ♪
-Dialogue: 0,0:01:41.48,0:01:43.39,GJM_Main_1080p,,0,0,0,,♪ The color of the deep sea, ♪
-Dialogue: 0,0:01:43.40,0:01:46.06,GJM_Main_1080p,,0,0,0,,♪ atop the fleeting bubbles ♪
-Dialogue: 0,0:01:46.61,0:01:48.36,GJM_Main_1080p,,0,0,0,,♪ It still gouges my chest... ♪
-Dialogue: 0,0:01:48.36,0:01:50.23,GJM_Main_1080p,,0,0,0,,♪ Wrapped in the\Nclinging scent of summer. ♪
-Dialogue: 0,0:01:50.24,0:01:52.91,GJM_Main_1080p,,0,0,0,,♪ I don't want to\Nforget — and yet... ♪
-Dialogue: 0,0:01:53.74,0:01:57.83,GJM_Main_1080p,,0,0,0,,♪ Before you arrived...\NI split this fruit. ♪
-Dialogue: 0,0:01:58.04,0:02:00.83,GJM_Main_1080p,,0,0,0,,♪ With those hands,\Nwith that desire. ♪
-Dialogue: 0,0:02:01.25,0:02:05.54,GJM_Main_1080p,,0,0,0,,♪ I want you to guide\Nthese restrained arms. ♪
-Dialogue: 0,0:02:05.92,0:02:08.67,GJM_Main_1080p,,0,0,0,,♪ Devour my flesh, my heart. ♪
-Dialogue: 0,0:02:09.13,0:02:12.26,GJM_Main_1080p,,0,0,0,,♪ Make it come true. ♪
-Dialogue: 0,0:02:13.97,0:02:16.55,GJM_Main_1080p,,0,0,0,,♪ Ah..., ♪
-Dialogue: 0,0:02:16.55,0:02:20.31,GJM_Main_1080p,,0,0,0,,♪ just wait a little longer. ♪
-Dialogue: 0,0:02:21.27,0:02:24.35,GJM_Main_1080p,,0,0,0,,♪ Ah... ♪
-Dialogue: 0,0:02:24.35,0:02:27.98,GJM_Main_1080p,,0,0,0,,♪ who was it that\Naimed for me? ♪
+Dialogue: 0,0:01:10.59,0:01:12.84,GJM_Main_1080p,,0,0,0,,{\k27}{\k26}do{\k25}u{\k25}ka {\k25}o{\k12}wa{\k23}ra{\k12}se{\k25}te {\k25}yo
+Dialogue: 0,0:01:12.84,0:01:14.93,GJM_Main_1080p,,0,0,0,,{\k13}{\k36}na{\k23}ni{\k24}mo {\k13}ka{\k12}mo {\k12}wo {\k13}u{\k25}ba{\k38}tte
+Dialogue: 0,0:01:15.05,0:01:19.02,GJM_Main_1080p,,0,0,0,,{\k24}{\k24}i{\k24}ta{\k13}mi {\k36}wo {\k24}ko{\k24}do{\k13}ku {\k25}wo {\k12}ku{\k24}ra{\k154}tte
+Dialogue: 0,0:01:30.57,0:01:35.41,GJM_Main_1080p,,0,0,0,,{\k24}{\k30}a{\k30}no{\k40} {\k29}hi {\k31}no{\k40} {\k26}ma{\k23}ma{\k50} {\k25}yo{\k23}do{\k15}n{\k35}de{\k25}i{\k38}ta
+Dialogue: 0,0:01:35.49,0:01:38.41,GJM_Main_1080p,,0,0,0,,{\k26}{\k24}ku{\k37}rai {\k34}kuu{\k26}kyo {\k35}na{\k37} {\k13}hi{\k14}bi {\k46}ni
+Dialogue: 0,0:01:38.41,0:01:41.33,GJM_Main_1080p,,0,0,0,,{\k28}{\k24}sa{\k70}shi{\k24}ta {\k76}hi{\k24}ka{\k46}ri
+Dialogue: 0,0:01:41.33,0:01:46.09,GJM_Main_1080p,,0,0,0,,{\k26}{\k26}u{\k24}ta{\k13}ka{\k35}ta {\k26}no {\k72}ne {\k25}fu{\k35}kai {\k36}u{\k25}mi {\k72}no {\k24}i{\k37}ro
+Dialogue: 0,0:01:46.50,0:01:48.30,GJM_Main_1080p,,0,0,0,,{\k21}{\k24}i{\k13}ma {\k25}mo {\k12}mu{\k12}ne {\k12}wo {\k25}e{\k13}gu{\k23}ru
+Dialogue: 0,0:01:48.30,0:01:50.26,GJM_Main_1080p,,0,0,0,,{\k12}{\k11}tsu{\k13}ki{\k25}ma{\k13}to{\k24}u {\k13}na{\k14}tsu {\k12}no {\k24}ni{\k12}o{\k23}i
+Dialogue: 0,0:01:50.26,0:01:53.30,GJM_Main_1080p,,0,0,0,,{\k13}{\k12}wa{\k12}su{\k24}re{\k12}ta{\k24}ku{\k12}na{\k24}i {\k25}so{\k13}re {\k36}de{\k24}mo {\k73}ne
+Dialogue: 0,0:01:53.55,0:01:57.93,GJM_Main_1080p,,0,0,0,,{\k25}{\k25}ki{\k14}mi {\k33}yo {\k25}ka{\k13}na{\k25}e{\k12}ta{\k24}ma{\k35}e {\k13}do{\k25}u{\k23}ka{3} {\k24}ko{\k13}no {\k24}mi {\k13}wo {\k12}sa{\k12}i{\k48}te
+Dialogue: 0,0:01:57.93,0:02:02.23,GJM_Main_1080p,,0,0,0,,{\k27}{\k24}so{\k24}no {\k13}te {\k37}de {\k24}so{\k24}no {\k12}yo{\k36}ku{\k25}bou {\k96}de {\k25}mi{\k25}ta{\k25}shi{\k13}te
+Dialogue: 0,0:02:02.23,0:02:05.73,GJM_Main_1080p,,0,0,0,,{\k12}{\k23}u{\k12}ru{\k23}wa{\k12}shi{\k26}ki {\k36}sei {\k35}no {\k26}ha{\k13}te {\k12}e {\k12}to {\k24}mi{\k12}chi{\k25}bii{\k47}te
+Dialogue: 0,0:02:05.73,0:02:08.65,GJM_Main_1080p,,0,0,0,,{\k24}{\k26}chi{\k25}ni{\k13}ku {\k37}mo {\k24}ko{\k24}ko{\k12}ro {\k25}mo {\k12}ku{\k24}ra{\k46}tte
+Dialogue: 0,0:02:08.90,0:02:12.07,GJM_Main_1080p,,0,0,0,,{\k26}{\k24}ka{\k24}na{\k24}e{\k24}te {\k195}yo
+Dialogue: 0,0:02:13.82,0:02:20.29,GJM_Main_1080p,,0,0,0,,{\k23}{\k236}ah{\k36} {\k24}mou {\k24}su{\k23}ko{\k25}shi {\k24}da{\k75}ke {\k24}ma{\k72}t{\k25}te{\k36}te
+Dialogue: 0,0:02:21.12,0:02:26.21,GJM_Main_1080p,,0,0,0,,{\k24}{\k280}ah{\k35} {\k25}wa{\k25}ta{\k24}shi {\k25}wa {\k24}ne{\k47}gau
+Dialogue: 0,0:02:26.21,0:02:28.67,GJM_Main_1080p,,0,0,0,,{\k24}{\k26}ta{\k74}da {\k25}ta{\k97}da

@@ -14,29 +14,30 @@ Style: GJM_Main_1080p,Gandhi Sans,75,&H00FFFFFF,&H000000FF,&H00000000,&HA0000000
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:22:00.61,0:22:03.70,GJM_Main_1080p,,0,0,0,,♪ Dear... I send\Nyou this LiLy! ♪
-Dialogue: 0,0:22:07.91,0:22:09.91,GJM_Main_1080p,,0,0,0,,♪ As for my days... ♪
-Dialogue: 0,0:22:10.25,0:22:13.13,GJM_Main_1080p,,0,0,0,,♪ they pass without\Nchange, quietly repeating. ♪
-Dialogue: 0,0:22:13.54,0:22:15.92,GJM_Main_1080p,,0,0,0,,♪ Ever since that day\Neverything changed. ♪
-Dialogue: 0,0:22:17.59,0:22:19.21,GJM_Main_1080p,,0,0,0,,♪ As for my days... ♪
-Dialogue: 0,0:22:19.80,0:22:22.47,GJM_Main_1080p,,0,0,0,,♪ My heart feels\Nunbearably heavy... ♪
-Dialogue: 0,0:22:22.89,0:22:25.14,GJM_Main_1080p,,0,0,0,,♪ Yet my body drifts,\Nsoft and weightless. ♪
-Dialogue: 0,0:22:26.51,0:22:29.43,GJM_Main_1080p,,0,0,0,,♪ Like being drawn\Ntoward a scent.. ♪
-Dialogue: 0,0:22:29.43,0:22:31.69,GJM_Main_1080p,,0,0,0,,♪ that's just out of reach... ♪
-Dialogue: 0,0:22:31.94,0:22:34.10,GJM_Main_1080p,,0,0,0,,♪ Those were the days I lived. ♪
-Dialogue: 0,0:22:35.27,0:22:38.27,GJM_Main_1080p,,0,0,0,,♪ A sudden summer breeze\Nmade white flowers sway, ♪
-Dialogue: 0,0:22:38.28,0:22:40.82,GJM_Main_1080p,,0,0,0,,♪ Touching my heart,\Nfragile like a pouch. ♪
-Dialogue: 0,0:22:41.24,0:22:44.49,GJM_Main_1080p,,0,0,0,,♪ You found me —\Nwith those eyes. ♪
-Dialogue: 0,0:22:47.08,0:22:49.37,GJM_Main_1080p,,0,0,0,,♪ Dear me... ♪
-Dialogue: 0,0:22:49.37,0:22:52.62,GJM_Main_1080p,,0,0,0,,♪ The pain I've\Ncarried so long- ♪
-Dialogue: 0,0:22:52.92,0:22:56.38,GJM_Main_1080p,,0,0,0,,♪ — is it finally scattering,\Nscattering away? ♪
-Dialogue: 0,0:22:56.50,0:23:01.88,GJM_Main_1080p,,0,0,0,,♪ The scenes you showed\Nme — so often beautiful... ♪
-Dialogue: 0,0:23:01.88,0:23:05.55,GJM_Main_1080p,,0,0,0,,♪ They're blooming...\Nstill blooming, even now. ♪
-Dialogue: 0,0:23:06.26,0:23:08.60,GJM_Main_1080p,,0,0,0,,♪ A sea so dark it\Nswallows even shadows... ♪
-Dialogue: 0,0:23:08.72,0:23:10.89,GJM_Main_1080p,,0,0,0,,♪ If it could cradle\Nthe goodbyes.. ♪
-Dialogue: 0,0:23:10.89,0:23:13.73,GJM_Main_1080p,,0,0,0,,♪ that lost their way...... ♪
-Dialogue: 0,0:23:14.23,0:23:18.02,GJM_Main_1080p,,0,0,0,,I found myself thinking\Nsuch things... ♪
-Dialogue: 0,0:23:18.02,0:23:22.03,GJM_Main_1080p,,0,0,0,,♪ But then you crossed my\Nmind... and I breathed again. ♪
-Dialogue: 0,0:23:23.32,0:23:24.74,GJM_Main_1080p,,0,0,0,,♪ Not to the me of today — ♪
-Dialogue: 0,0:23:24.74,0:23:26.24,GJM_Main_1080p,,0,0,0,,♪ but to me of that day — ♪
-Dialogue: 0,0:23:26.24,0:23:28.16,GJM_Main_1080p,,0,0,0,,♪ I send this lily. ♪
+Dialogue: 0,0:22:00.43,0:22:04.22,GJM_Main_1080p,,0,0,0,,{\k26}{\k29}hai{\k28}kei {\k28}o{\k28}ku{\k29}ru {\k60}yo {\k31}li{\k120}ly
+Dialogue: 0,0:22:07.81,0:22:09.89,GJM_Main_1080p,,0,0,0,,{\k26}{\k15}wa{\k14}ta{\k14}shi {\k16}no {\k14}hi{\k14}bi {\k16}wa {\k15}to{\k33}iu {\k31}to
+Dialogue: 0,0:22:10.10,0:22:13.35,GJM_Main_1080p,,0,0,0,,{\k28}{\k15}ka{\k17}wa{\k15}ri{\k16}ba{\k8}e {\k16}no {\k16}na{\k15}i {\k16}hi{\k16}bi {\k30}wo {\k14}su{\k15}go{\k14}shi{\k14}te{\k60}masu
+Dialogue: 0,0:22:13.35,0:22:15.94,GJM_Main_1080p,,0,0,0,,{\k26}{\k15}ka{\k29}wa{\k15}tte{\k15}shi{\k30}ma{\k15}tta {\k8}a{\k15}no {\k31}hi {\k16}ka{\k44}ra
+Dialogue: 0,0:22:17.15,0:22:19.36,GJM_Main_1080p,,0,0,0,,{\k25}{\k14}wa{\k15}ta{\k13}shi {\k14}no {\k16}hi{\k14}bi {\k16}wa {\k19}to{\k29}iu {\k46}to
+Dialogue: 0,0:22:19.49,0:22:22.53,GJM_Main_1080p,,0,0,0,,{\k26}{\k14}ko{\k14}ko{\k15}ro {\k15}wa {\k14}ko{\k15}n{\k14}na{\k14}ni {\k15}mo {\k15}hi{\k14}do{\k15}ku {\k14}o{\k15}mo{\k15}i {\k16}no{\k44}ni
+Dialogue: 0,0:22:22.66,0:22:25.33,GJM_Main_1080p,,0,0,0,,{\k28}{\k15}ka{\k14}ra{\k15}da {\k14}wa {\k14}fu{\k16}wa{\k14}fu{\k15}wa {\k14}to {\k15}ka{\k31}ru{\k15}ku{\k47}te
+Dialogue: 0,0:22:26.24,0:22:29.37,GJM_Main_1080p,,0,0,0,,{\k27}{\k31}ho{\k30}no{\k29}ka {\k30}ni {\k31}ka{\k29}o{\k30}ru {\k30}ho{\k30}u {\k16}e
+Dialogue: 0,0:22:29.37,0:22:31.83,GJM_Main_1080p,,0,0,0,,{\k26}{\k15}sa{\k15}so{\k15}wa{\k15}re{\k15}te{\k15}yu{\k30}ku {\k12}mi{\k15}ta{\k14}i {\k59}na
+Dialogue: 0,0:22:31.83,0:22:34.38,GJM_Main_1080p,,0,0,0,,{\k27}{\k30}son{\k30}na{\k44} {\k15}hi{\k15}bi {\k16}de{\k15}shi{\k63}ta
+Dialogue: 0,0:22:35.17,0:22:38.25,GJM_Main_1080p,,0,0,0,,{\k25}{\k15}to{\k15}tsu{\k15}ze{\k15}n {\k15}no {\k15}na{\k15}tsu{\k15}ka{\k15}ze {\k15}ni {\k15}shi{\k14}ro{\k14}i {\k18}ha{\k14}na {\k15}ga {\k15}yu{\k15}re{\k13}ta
+Dialogue: 0,0:22:38.25,0:22:40.76,GJM_Main_1080p,,0,0,0,,{\k10}{\k15}mu{\k15}ku{\k15}ro {\k15}mi{\k15}ta{\k15}i {\k15}na {\k15}ko{\k15}ko{\k15}ro {\k30}ni {\k15}fu{\k15}re{\k31}ta
+Dialogue: 0,0:22:41.01,0:22:44.72,GJM_Main_1080p,,0,0,0,,{\k26}{\k15}so{\k15}no {\k15}hi{\k15}to{\k16}mi {\k45}de {\k13}mi{\k13}tsu{\k15}ke{\k15}te{\k15}ku{\k28}re{\k16}ta {\k31}n{\k16}da {\k62}ne
+Dialogue: 0,0:22:46.97,0:22:49.18,GJM_Main_1080p,,0,0,0,,{\k26}{\k30}hai{\k30}kei {\k30}wa{\k30}ta{\k30}shi {\k45}e
+Dialogue: 0,0:22:49.18,0:22:52.64,GJM_Main_1080p,,0,0,0,,{\k26}{\k15}ka{\k15}ka{\k15}e{\k15}ta {\k13}ma{\k29}ma {\k29}da{\k29}t{\k58}ta {\k28}i{\k15}ta{\k26}mi {\k33}wa
+Dialogue: 0,0:22:52.77,0:22:56.31,GJM_Main_1080p,,0,0,0,,{\k28}{\k29}chi{\k59}tte{\k30} {\k30}chi{\k58}tte{\k15} {\k15}yu{\k15}ku {\k15}no {\k15}ka{\k45}na
+Dialogue: 0,0:22:56.31,0:22:58.48,GJM_Main_1080p,,0,0,0,,{\k27}{\k30}tai{\k29}tei {\k29}u{\k29}tsu{\k29}ku{\k44}shii
+Dialogue: 0,0:22:58.48,0:23:02.15,GJM_Main_1080p,,0,0,0,,{\k28}{\k15}ki{\k16}mi {\k15}ga {\k13}mi{\k14}se{\k28}te{\k28}ku{\k29}re{\k49}ta {\k42}ke{\k16}shi{\k17}ki {\k57}ga
+Dialogue: 0,0:23:02.15,0:23:05.66,GJM_Main_1080p,,0,0,0,,{\k26}{\k28}sai{\k44}te{\k44} {\k30}sai{\k44}te{\k28} {\k15}i{\k15}ru {\k15}n{\k15}da {\k47}yo
+Dialogue: 0,0:23:06.07,0:23:08.58,GJM_Main_1080p,,0,0,0,,{\k26}{\k14}ka{\k14}ge {\k14}mo {\k16}o{\k16}chi{\k15}nu {\k15}ho{\k14}do {\k14}no {\k16}ku{\k13}ro{\k12}i {\k15}u{\k20}mi {\k17}ga
+Dialogue: 0,0:23:08.58,0:23:10.87,GJM_Main_1080p,,0,0,0,,{\k13}{\k10}i{\k14}ki{\k14}ba {\k15}wo {\k15}na{\k14}ku{\k17}shi{\k16}ta {\k13}sa{\k15}yo{\k13}na{\k19}ra {\k41}wo
+Dialogue: 0,0:23:10.87,0:23:13.96,GJM_Main_1080p,,0,0,0,,{\k27}{\k29}u{\k29}ke{\k28}to{\k29}me{\k45}te{\k15}ku{\k15}re{\k15}ru {\k15}na{\k62}ra
+Dialogue: 0,0:23:13.96,0:23:15.12,GJM_Main_1080p,,0,0,0,,{\k25}{\k15}na{\k16}n{\k60}te
+Dialogue: 0,0:23:15.38,0:23:17.88,GJM_Main_1080p,,0,0,0,,{\k27}{\k14}so{\k15}n{\k14}na {\k15}ko{\k15}to {\k15}wo {\k15}o{\k29}mo{\k29}tte{\k16}shi{\k30}ma{\k16}tta
+Dialogue: 0,0:23:17.88,0:23:22.09,GJM_Main_1080p,,0,0,0,,{\k11}{\k14}da{\k14}ke{\k14}do {\k15}ki{\k15}mi {\k15}ga {\k15}yo{\k30}gi{\k44}tte {\k14}ma{\k30}ta {\k29}i{\k59}ki{\k14} {\k29}wo {\k15}shi{\k44}teru
+Dialogue: 0,0:23:23.09,0:23:24.72,GJM_Main_1080p,,0,0,0,,{\k27}{\k30}kyou {\k15}no {\k15}wa{\k30}tashi {\k15}ja{\k31}nai
+Dialogue: 0,0:23:24.72,0:23:28.10,GJM_Main_1080p,,0,0,0,,{\k25}{\k14}a{\k15}no {\k15}hi {\k15}no {\k14}wa{\k15}ta{\k13}shi {\k15}ni {\k15}o{\k30}ku{\k59}ru {\k16}li{\k77}ly
