@@ -508,14 +508,14 @@ class DefaultZone:
 # If you've adjusted the script to select more frames than the default
 # of your downloaded Progression Boost Preset, you can try
 # `--crf 60.00` here, but `--crf 50.00` should also be fine.
-    metric_max_crf = 52.00
+    metric_max_crf = 38.00
 # For the minimum `--crf` value, the precision of this boosting method
 # deteriorates at very low `--crf` values. And also unless you're
 # willing to spend 10% of your entire episode in a single 6 second
 # scene, you really don't want it that low.
 # That's said, if you are aiming for the highest quality, fell free to
 # lower this further to `--crf 6.00`.
-    metric_min_crf = 10.00
+    metric_min_crf = 11.00
 # Our first probe will be happening at `--crf 24.00`. If the quality of
 # the scene is worse than `metric_target`, we will perform our second
 # probe at a better `--crf`. In very rare and strange scenarios, this
@@ -572,7 +572,7 @@ class DefaultZone:
 # clamp this one last time.
 # This clamp is applied after both Progression Boost and Character
 # Boost has finished.
-    final_min_crf = 8.50
+    final_min_crf = 9.00
 
 # `--resume` information: If you changed parameters for probing, you
 # need to delete everything in `progression-boost` folder inside the
@@ -628,7 +628,10 @@ class DefaultZone:
     def metric_dynamic_preset(self, start_frame: int, end_frame: int,
                                     crf: float,
                                     luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> int:
-        return 0 # TODO
+        if crf < 14.00:
+            return -1
+        else:
+            return 0
 
 # `--resume` information: If you changed parameters for probing, you
 # need to delete everything in `progression-boost` folder inside the
@@ -685,16 +688,30 @@ class DefaultZone:
                                          crf: float,
                                          luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> list[str]:
         return """--lp 3 --keyint -1 --input-depth 10 --scm 0
-                  --tune 3 --qp-scale-compress-strength 3 --luminance-qp-bias 12 --qm-min 8 --chroma-qm-min 10
-                  --complex-hvs 0 --psy-rd 1.5 --spy-rd 0
+                  --tune 0
+                  --variance-octile 4 --qp-scale-compress-strength 4 --luminance-qp-bias 20
+                  --key-frame-chroma-qindex-offset -25 --chroma-qindex-offsets [-19,-14,-13,-11,-10,-10]
+                  --qm-min 9 --chroma-qm-min 10
+                  --filtering-noise-detection 4
+                  --psy-rd 4.5 --spy-rd 2 --complex-hvs 0
                   --color-primaries 1 --transfer-characteristics 1 --matrix-coefficients 1 --color-range 0""".split()
     def final_dynamic_parameters(self, start_frame: int, end_frame: int,
                                        crf: float,
                                        luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> list[str]:
-        return """--lp 3 --keyint -1 --input-depth 10 --scm 0
-                  --tune 3 --qp-scale-compress-strength 3 --luminance-qp-bias 12 --qm-min 8 --chroma-qm-min 10
-                  --complex-hvs 1 --psy-rd 1.5 --spy-rd 0
-                  --color-primaries 1 --transfer-characteristics 1 --matrix-coefficients 1 --color-range 0""".split()
+        pararmeters = """--lp 3 --keyint -1 --input-depth 10 --scm 0
+                         --tune 0
+                         --variance-octile 4 --qp-scale-compress-strength 4 --luminance-qp-bias 20
+                         --key-frame-chroma-qindex-offset -25 --chroma-qindex-offsets [-19,-14,-13,-11,-10,-10]
+                         --qm-min 9 --chroma-qm-min 10
+                         --filtering-noise-detection 4
+                         --spy-rd 2 --complex-hvs 1
+                         --color-primaries 1 --transfer-characteristics 1 --matrix-coefficients 1 --color-range 0""".split()
+        if crf <= 19.00:
+            parameters += ["--max-32-tx-size", "1"]
+        parameters += ["--psy-rd", f"{np.interp(crf, [25,  29,  33],
+                                                     [4.5, 4.0, 3.0]):.2f}"]
+
+        return parameters
 
 # `--resume` information: If you changed parameters for probing, you
 # need to delete everything in `progression-boost` folder inside the
