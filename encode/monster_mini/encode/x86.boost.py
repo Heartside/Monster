@@ -1309,13 +1309,38 @@ zones_spec["builtin_example"] = BuiltinExampleZone()
 # Now you can implement your own zone below:
 
 class GrainZone(DefaultZone):
-    metric_target = 0.950
+    def metric_dynamic_preset(self, start_frame: int, end_frame: int,
+                                    crf: float,
+                                    luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> int:
+        return -1
+    def probing_dynamic_parameters(self, start_frame: int, end_frame: int,
+                                         crf: float,
+                                         luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> list[str]:
+        return """--lp 3 --keyint -1 --input-depth 10 --scm 0
+                  --tune 0 --qp-scale-compress-strength 3 --luminance-qp-bias 20
+                  --key-frame-chroma-qindex-offset -18 --chroma-qindex-offsets [-16,-14,-13,-13,-11,-11]
+                  --qm-min 9 --chroma-qm-min 10
+                  --film-grain 0 --adaptive-film-grain 0
+                  --psy-rd 2.0 --spy-rd 2 --complex-hvs 0
+                  --color-primaries 1 --transfer-characteristics 1 --matrix-coefficients 1 --color-range 0""".split()
+    def final_dynamic_parameters(self, start_frame: int, end_frame: int,
+                                       crf: float,
+                                       luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> list[str]:
+        return """--lp 3 --keyint -1 --input-depth 10 --scm 0
+                  --tune 0 --qp-scale-compress-strength 3 --luminance-qp-bias 20
+                  --key-frame-chroma-qindex-offset -18 --chroma-qindex-offsets [-16,-14,-13,-13,-11,-11]
+                  --qm-min 9 --chroma-qm-min 10
+                  --film-grain 28 --adaptive-film-grain 0
+                  --psy-rd 2.0 --spy-rd 2 --complex-hvs 1
+                  --color-primaries 1 --transfer-characteristics 1 --matrix-coefficients 1 --color-range 0""".split()
 
     def final_dynamic_photon_noise(self, start_frame: int, end_frame: int,
                                          luma_average: np.ndarray[np.float32], luma_min: np.ndarray[np.float32], luma_max: np.ndarray[np.float32], luma_diff: np.ndarray[np.float32]) -> Optional[int]:
         return None
     final_photon_noise_height = None
     final_photon_noise_width = None
+
+    metric_target = 1.000
 
 zones_spec["grain"] = GrainZone()
 # ---------------------------------------------------------------------
